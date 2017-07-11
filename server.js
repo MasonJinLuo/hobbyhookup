@@ -3,6 +3,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
+var path = require("path");
 
 // Sets up the Express App
 // =============================================================
@@ -17,7 +18,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Requiring our models for syncing
-// var hobbyhookupdb = require("./models");
+var hobbyhookupdb = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -31,8 +32,8 @@ app.use(express.static("./public"));
 
 // Routes =============================================================
 
-// hobbyhookupdb.sequelize.sync().then(function() {
+hobbyhookupdb.sequelize.sync().then(function() {
     app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
     });
-// });
+});
