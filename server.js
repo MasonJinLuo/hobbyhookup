@@ -4,6 +4,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var path = require("path");
+var passport = require('passport')
+var cookieParser = require('cookie-parser');
 
 // Sets up the Express App
 // =============================================================
@@ -30,8 +32,21 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("./public"));
 
 
+//Setting up login session
+//IMPORTANT TODO:  CHANGE THIS SESSION SECRET FOR A PRODUCTION SERVER
+app.use(cookieParser())
+app.use(session({ secret: 'friedbanana', resave: false, saveUninitialized: false }))
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+setupPassport(app);
+
 // Routes =============================================================
 
+//	¯\_(ツ)_/¯
+
+
+// Syncing our sequelize models and then starting our express app
 hobbyhookupdb.sequelize.sync().then(function() {
     app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
