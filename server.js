@@ -4,8 +4,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var path = require("path");
-var passport = require('passport')
+var setupPassport = require('passport')
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 // Sets up the Express App
 // =============================================================
