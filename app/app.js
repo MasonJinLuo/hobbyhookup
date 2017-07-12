@@ -1,10 +1,12 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Router = require('react-router').Router;
 
+var routes = require('./config/routes');
 
-// Include the main Parent Component
-var Main = require("./components/Main");
+ReactDOM.render(
 
+  <Router>{routes}</Router>,
+  document.getElementById('app')
 
-// This code here allows us to render our main component (in this case Parent)
-ReactDOM.render(<Main />, document.getElementById("app"));
+);

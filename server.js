@@ -6,6 +6,7 @@ var logger = require("morgan");
 var path = require("path");
 var passport = require('passport')
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 // Sets up the Express App
 // =============================================================
@@ -21,6 +22,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Requiring our models for syncing
 var hobbyhookupdb = require("./models");
+
+var setupPassport = require('./passport.js');
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());

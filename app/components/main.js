@@ -1,13 +1,16 @@
 var React = require("react");
+var Router = require('react-router');
 
 var Main = React.createClass({
+	signUp: function(){
+		console.log("signup class is working")
+		location.href = "Login"
+	},
 
 	render: function(){
 		return (
-			<div className="container">
-				<div className="jumbotron head">
-					<h1> Hello World </h1>
-				</div>
+			<div>
+				{this.props.children}
 			</div>
 		);
 	}
