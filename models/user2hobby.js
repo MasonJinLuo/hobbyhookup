@@ -1,6 +1,11 @@
 module.exports = function(sequelize, DataTypes){
 	var User2Hobby = sequelize.define("User2Hobby", {
-		 createdAt: {
+        level: {
+            type: DataTypes.STRING,
+            defaultValue: "Novice",
+            allowNull: false
+        },
+		createdAt: {
             type: DataTypes.DATE,
             field: 'createdAt',
             defaultValue: sequelize.literal('NOW()')

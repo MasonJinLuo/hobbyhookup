@@ -1,11 +1,16 @@
 module.exports = function(sequelize, DataTypes){
 	var Chat = sequelize.define("Chat", {
-		from:{
+		sender:{
 			type: DataTypes.STRING,
 			allowNull: false
 		},
 
-		to:{
+		receiver:{
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+
+		message: {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
