@@ -52,3 +52,30 @@
 	width: 100%;
 	padding: 0px;
 }
+
+.hobbyContainer{
+    background-image: url('../images/bees2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    text-shadow: 3px 3px black;
+    border: solid white;
+    border-radius: 15px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    height: 300px
+}
+
+.infoContainer{
+    background-color: grey;
+    border: solid white;
+    border-radius: 15px;
+    font-size: 12px;
+    text-shadow: none;
+
+}   
+
+.connectButton{
+    
+}

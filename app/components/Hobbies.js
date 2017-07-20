@@ -4,6 +4,7 @@ var Router = require('react-router');
 var Hobbies = React.createClass({
 	render: function(){
 		return (
+			<div>
 			<div className="container navContainer">
 				<nav className="navbar navbar-default">
 			  <div className="container-fluid">
@@ -39,6 +40,21 @@ var Hobbies = React.createClass({
 			      </div>
 			    </div>
 			</nav>	
+		</div>
+
+		<div className='container'>
+			<div className='hobbyContainer'>
+				<div> Bee Keeping </div>
+			</div> 
+		<br></br>
+		<div className='infoContainer'>
+		    <div>Information Content</div>
+	    </div>
+		</div>
+		<br></br>
+		<div className='container'>
+			<button className='connectButton btn btn-success'> Connect </button>
+		</div> 
 		</div>
 		);
 	}

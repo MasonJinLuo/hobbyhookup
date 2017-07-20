@@ -34,6 +34,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("./public"));
 
+// Routes =============================================================
+
+//	¯\_(ツ)_/¯
+
+require("./routes/hobby-routes.js")(app);
+
 
 //Setting up login session
 //IMPORTANT TODO:  CHANGE THIS SESSION SECRET FOR A PRODUCTION SERVER
@@ -44,9 +50,6 @@ app.use(session({ secret: 'friedbanana', resave: false, saveUninitialized: false
 // session.
 setupPassport(app);
 
-// Routes =============================================================
-
-//	¯\_(ツ)_/¯
 
 
 // Syncing our sequelize models and then starting our express app
