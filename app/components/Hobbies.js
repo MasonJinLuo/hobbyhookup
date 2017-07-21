@@ -41,21 +41,47 @@ var Hobbies = React.createClass({
 			    </div>
 			</nav>	
 		</div>
+		<div id='main'>
+			<article className="post featured">
+				<header className="major">
+					<h2><a href="#">Beekeeping</a></h2>				
+				</header>
+				<a href="#" className="image main"><img src="images/bees2.jpg" alt="" /></a>
+				<ul className="actions">
+					<li><a href="#" className="button big" id="connectBTN">Connect</a></li>
+				</ul>
+			</article>
+			<div className="matches">
+    			<h2> Your Matches </h2>
+  				<div className="row">
+  					<div className="col-lg-4 col-sm-6 col-xs-12" id="match1">
+  						<a href="#">
+  							<img src="http://placehold.it/800x600" className="img-circle img-responsive" id="matchPicture1"></img>
+  						 </a>
+  						<h4 id="matchName1">Name</h4>
+  					</div>
+  					<div className="col-lg-4 col-sm-6 col-xs-12" id="match2">
+  						<a href="#">
+  						    <img src="http://placehold.it/800x600" className="img-circle img-responsive" id="matchPicture2"></img>
+  						 </a>
+  						 <h4 id="matchName2">Name</h4>
+  					</div>
+  					<div className="col-lg-4 col-sm-6 col-xs-12" id="match2">
+  						<a href="#">
+  						    <img src="http://placehold.it/800x600" className="img-circle img-responsive" id="matchPicture3"></img>
+  						</a>
+  						<h4 id="matchName3">Name</h4>
+  					</div>
+  				</div>
+  			</div>
+		</div>
+		<div id="copyright">
+			<ul><li>&copy; Hobby Hookup</li></ul>
+		</div>
+	</div>
 
-		<div className='container'>
-			<div className='hobbyContainer'>
-				<div> Bee Keeping </div>
-			</div> 
-		<br></br>
-		<div className='infoContainer'>
-		    <div>Information Content</div>
-	    </div>
-		</div>
-		<br></br>
-		<div className='container'>
-			<button className='connectButton btn btn-success'> Connect </button>
-		</div> 
-		</div>
+
+
 		);
 	}
 

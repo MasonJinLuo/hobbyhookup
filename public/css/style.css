@@ -61,6 +61,7 @@
     border: solid white;
     border-radius: 15px;
     padding-top: 30px;
+    margin: 100px;
     text-align: center;
     font-size: 60px;
     color: white;
@@ -78,4 +79,14 @@
 
 .connectButton{
     
+}
+
+/*match names for hobbies.js*/
+#matchName1 , #matchName2, #matchName3{
+    text-align: center;
+}
+
+/*hobby names for profile*/
+#userHobby1, #userHobby2, #userHobby3, #userHobby4, #userHobby5, #userHobby6{
+    text-align: center;
 }
