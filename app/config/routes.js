@@ -9,6 +9,7 @@ var Main = require('../components/Main');
 var Login = require('../components/Login');
 var Homepage = require('../components/Homepage')
 var Hobbies = require('../components/Hobbies')
+var Profile = require('../components/Profile')
 
 module.exports = (
 
@@ -16,6 +17,7 @@ module.exports = (
   	<Route path='Homepage' component={Homepage} />
     <Route path='Login' component={Login} />
     <Route path='Hobbies' component={Hobbies} />
+     <Route path='Profile' component={Profile} />
 
     <IndexRoute component={Homepage} />
 
