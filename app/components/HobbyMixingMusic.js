@@ -1,7 +1,8 @@
 var React = require("react");
 var Router = require('react-router');
 var Matches = require('./Matches')
-var Hobbies = React.createClass({
+
+var HobbyMixingMusic = React.createClass({
 	getInitialState: function() {
 		return {
 	      results: [],
@@ -17,7 +18,7 @@ var Hobbies = React.createClass({
 	fetchData : function(){
 		$.ajax({
   			method: "GET",
-  			url: "/beekeeping"
+  			url: "/api/mixingmusic"
 		})
 		  .then(function(data) {
 		  	console.log(data)
@@ -77,9 +78,9 @@ var Hobbies = React.createClass({
 		<div id='main'>
 			<article className="post featured">
 				<header className="major">
-					<h2><a href="#">Beekeeping</a></h2>				
+					<h2><a href="#">Mixing Music</a></h2>				
 				</header>
-				<a href="#" className="image main"><img src="images/bees2.jpg" alt="" /></a>
+				<a href="#" className="image main"><img src="http://www.lifehacker.co.in/photo/58257453/jugaad/5-secrets-of-mixing-music-from-a-pro-dj-duo.jpg?79571" alt="" /></a>
 				<ul className="actions">
 					<li><button className="button big" id="connectBTN" onClick={this.fetchData}>Connect</button></li>
 				</ul>
@@ -102,4 +103,4 @@ var Hobbies = React.createClass({
 
 });
 
-module.exports = Hobbies;
+module.exports = HobbyMixingMusic;

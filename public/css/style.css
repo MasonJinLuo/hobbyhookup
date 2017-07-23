@@ -90,3 +90,9 @@
 #userHobby1, #userHobby2, #userHobby3, #userHobby4, #userHobby5, #userHobby6{
     text-align: center;
 }
+
+
+#inbox{
+    width: 80%;
+    margin: auto;
+}

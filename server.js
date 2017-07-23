@@ -39,6 +39,7 @@ app.use(express.static("./public"));
 //	¯\_(ツ)_/¯
 
 require("./routes/hobby-routes.js")(app);
+require("./routes/messages-route.js")(app);
 
 
 //Setting up login session

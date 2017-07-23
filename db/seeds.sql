@@ -9,52 +9,81 @@ insert into Users (email, password, image_path, first_name, last_name, username,
 
 
 insert into Hobbies (name) values ('bee keeping'); 
-insert into Hobbies (name) values ('extreme knitting');
-insert into Hobbies (name) values ('mountain climbing');
-insert into Hobbies (name) values ('dog whispering');
-insert into Hobbies (name) values ('candy crusher');
-insert into Hobbies (name) values ('deep sea diving');
-insert into Hobbies (name) values ('monster hunting');
-insert into Hobbies (name) values ('bird watching');	
+insert into Hobbies (name) values ('speed reading');
+insert into Hobbies (name) values ('rock climbing');
+insert into Hobbies (name) values ('mixing music');
+insert into Hobbies (name) values ('bird watching');
+insert into Hobbies (name) values ('cycling');
+insert into Hobbies (name) values ('body building');
+insert into Hobbies (name) values ('beer tasting');
+insert into Hobbies (name) values ('parkour');	
+insert into Hobbies (name) values ('photography');
+insert into Hobbies (name) values ('salsa dancing');			
 
 insert into User2Hobbies (user_id, hobby_id, level) values (1, 1, 'Novice');
 insert into User2Hobbies (user_id, hobby_id, level) values (1, 2, 'Novice');
 insert into User2Hobbies (user_id, hobby_id, level) values (1, 3, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (1, 8, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (1, 11, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (1, 6, 'Novice');
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (2, 4, 'Intermediate');
 insert into User2Hobbies (user_id, hobby_id, level) values (2, 5, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (2, 6, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (2, 9, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (2, 10, 'Intermediate');
+
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (3, 1, 'Intermediate');
-insert into User2Hobbies (user_id, hobby_id, level) values (3, 4, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (3, 4, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (3, 7, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (3, 8, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (3, 10, 'Intermediate');	
 
 
-insert into User2Hobbies (user_id, hobby_id, level) values (4, 2, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (4, 2, 'Intermediate');
 insert into User2Hobbies (user_id, hobby_id, level) values (4, 3, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (4, 6, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (4, 9, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (4, 11, 'Intermediate');
+
+
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (5, 3, 'Intermediate');
 insert into User2Hobbies (user_id, hobby_id, level) values (5, 6, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (5, 7, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (5, 8, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (5, 10, 'Novice');	
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (6, 1, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (6, 5, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (6, 8, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (6, 10, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (6, 11, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (6, 7, 'Expert');
+
+
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (7, 5, 'Novice');
 insert into User2Hobbies (user_id, hobby_id, level) values (7, 6, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (7, 7, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (7, 9, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (7, 11, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (7, 4, 'Novice');		
 
 
 insert into User2Hobbies (user_id, hobby_id, level) values (8, 3, 'Expert');
 insert into User2Hobbies (user_id, hobby_id, level) values (8, 5, 'Intermediate');
 insert into User2Hobbies (user_id, hobby_id, level) values (8, 8, 'Expert');
+insert into User2Hobbies (user_id, hobby_id, level) values (8, 9, 'Intermediate');
+insert into User2Hobbies (user_id, hobby_id, level) values (8, 10, 'Novice');
+insert into User2Hobbies (user_id, hobby_id, level) values (8, 2, 'Expert');	
+
 
 
 
