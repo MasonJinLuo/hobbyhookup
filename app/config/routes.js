@@ -37,20 +37,104 @@ module.exports = (
 
 	<Route path='/' component={Main}>
 
-    <Route path='HobbyBeeKeeping' component={HobbyBeeKeeping} />
-    <Route path='HobbySpeedReading' component={HobbySpeedReading} />
-    <Route path='HobbyRockClimbing' component={HobbyRockClimbing} />
-    <Route path='HobbyMixingMusic' component={HobbyMixingMusic} />
-    <Route path='HobbyBirdWatching' component={HobbyBirdWatching} />
-  	<Route path='HobbyCycling' component={HobbyCycling} />
-  	<Route path='HobbyBodyBuilding' component={HobbyBodyBuilding} />
-  	<Route path='HobbyBeerTasting' component={HobbyBeerTasting} />
-  	<Route path='HobbyParkour' component={HobbyParkour} />
-  	<Route path='HobbyPhotography' component={HobbyPhotography} />
-  	<Route path='HobbySalsaDancing' component={HobbySalsaDancing} />
-    <Route path='Messages' component={Messages} />
-    <Route path='Inbox' components={Inbox} />
-    <Route path='Profile' component={Profile} />
+    <Route path='HobbyBeeKeeping' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyBeeKeeping);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='HobbySpeedReading' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbySpeedReading);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='HobbyRockClimbing' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyRockClimbing);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='HobbyMixingMusic' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyMixingMusic);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='HobbyBirdWatching' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyBirdWatching);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbyCycling' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyCycling);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbyBodyBuilding' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyBodyBuilding);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbyBeerTasting' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyBeerTasting);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbyParkour' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyParkour);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbyPhotography' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbyPhotography);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+  	<Route path='HobbySalsaDancing' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, HobbySalsaDancing);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='Messages' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, Messages);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='Inbox' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, Inbox);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='Profile' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, Profile);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
 
   	<Route path='Homepage' 
   	getComponent={(location, callback)=> {
