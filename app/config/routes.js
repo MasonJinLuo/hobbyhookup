@@ -36,8 +36,7 @@ import Auth from '../components/login/Auth';
 module.exports = (
 
 	<Route path='/' component={Main}>
-  	<Route path='Homepage' component={Homepage} />
-    <Route path='Login' component={Login} />
+
     <Route path='HobbyBeeKeeping' component={HobbyBeeKeeping} />
     <Route path='HobbySpeedReading' component={HobbySpeedReading} />
     <Route path='HobbyRockClimbing' component={HobbyRockClimbing} />
@@ -51,10 +50,8 @@ module.exports = (
   	<Route path='HobbySalsaDancing' component={HobbySalsaDancing} />
     <Route path='Messages' component={Messages} />
     <Route path='Inbox' components={Inbox} />
-
     <Route path='Profile' component={Profile} />
 
-  	<Route path='/' component={Main}>
   	<Route path='Homepage' 
   	getComponent={(location, callback)=> {
   		if (Auth.isUserAuthenticated()) {
@@ -63,7 +60,6 @@ module.exports = (
           callback(null, LoginPage);
         }
     }} />
-    <Route path='/' component={Main}>
   	<Route path='DashboardPage' 
   	getComponent={(location, callback)=> {
   		if (Auth.isUserAuthenticated()) {
@@ -98,5 +94,4 @@ module.exports = (
         }
     }} /> 
   </Route>
-
 );
