@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
 
         first_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
 
         last_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
@@ -55,7 +55,7 @@ module.exports = function(sequelize, DataTypes) {
 
         location: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }
@@ -63,7 +63,7 @@ module.exports = function(sequelize, DataTypes) {
 
         age: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 len: [1]
             }

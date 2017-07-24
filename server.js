@@ -22,8 +22,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Requiring our models for syncing
 var hobbyhookupdb = require("./models");
-
-var setupPassport = require('./passport.js');
+// var setupPassport = require('./passport.js');
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -34,6 +33,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("./public"));
 
+
 // Routes =============================================================
 
 //	¯\_(ツ)_/¯
@@ -41,15 +41,42 @@ app.use(express.static("./public"));
 require("./routes/hobby-routes.js")(app);
 require("./routes/messages-route.js")(app);
 
+// app.use(express.static('./server/static/'));
+// app.use(express.static('./client/dist/'));
+app.use(passport.initialize());
 
-//Setting up login session
+
+// //Setting up login 
+//TODO : Now using a different file for this, can probably delete
 //IMPORTANT TODO:  CHANGE THIS SESSION SECRET FOR A PRODUCTION SERVER
-app.use(cookieParser())
-app.use(session({ secret: 'friedbanana', resave: false, saveUninitialized: false }))
+// app.use(cookieParser())
+// app.use(session({ secret: 'friedbanana', resave: false, saveUninitialized: false }))
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-setupPassport(app);
+// setupPassport(app);
+
+// load passport strategies
+const localSignupStrategy = require('./server/passport/local-signup');
+const localLoginStrategy = require('./server/passport/local-login');
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);
+
+// pass the authenticaion checker middleware
+const authCheckMiddleware = require('./server/passport/auth-check');
+app.use('/api', authCheckMiddleware);
+
+
+// Routes =============================================================
+const authRoutes = require('./server/routes/auth');
+const apiRoutes = require('./server/routes/api');
+app.use('/auth', authRoutes);
+app.use('/api', apiRoutes);
+
+//	¯\_(ツ)_/¯
+app.get("/*", function(req, res) {
+res.sendFile(__dirname + '/public/index.html')
+})
 
 
 

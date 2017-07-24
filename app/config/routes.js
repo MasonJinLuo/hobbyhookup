@@ -6,7 +6,7 @@ var Route = Router.Route;
 var IndexRoute  = Router.IndexRoute;
 
 var Main = require('../components/Main');
-var Login = require('../components/Login');
+// var Login = require('../components/Login');
 var Homepage = require('../components/Homepage')
 var HobbyBeeKeeping = require('../components/HobbyBeeKeeping')
 var HobbySpeedReading = require('../components/HobbySpeedReading')
@@ -23,9 +23,19 @@ var Profile = require('../components/Profile')
 var Messages = require('../components/Messages')
 var Inbox = require('../components/Inbox')
 
+var Hobbies = require('../components/Hobbies')
+import Base from '../components/login/Base.jsx';
+// import HomePage from '../app/components/login/HomePage.jsx';
+import DashboardPage from '../components/login/DashboardPage.jsx';
+import LoginPage from '../components/login/LoginPage.jsx';
+import SignUpPage from '../components/login/SignUpPage.jsx';
+import Auth from '../components/login/Auth';
+
+
+    // <Route path='/dashboard' component={DashboardPage} />
 module.exports = (
 
-  <Route path='/' component={Main}>
+	<Route path='/' component={Main}>
   	<Route path='Homepage' component={Homepage} />
     <Route path='Login' component={Login} />
     <Route path='HobbyBeeKeeping' component={HobbyBeeKeeping} />
@@ -44,8 +54,49 @@ module.exports = (
 
     <Route path='Profile' component={Profile} />
 
-    <IndexRoute component={Homepage} />
+  	<Route path='/' component={Main}>
+  	<Route path='Homepage' 
+  	getComponent={(location, callback)=> {
+  		if (Auth.isUserAuthenticated()) {
+          callback(null, Homepage);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='/' component={Main}>
+  	<Route path='DashboardPage' 
+  	getComponent={(location, callback)=> {
+  		if (Auth.isUserAuthenticated()) {
+          callback(null, Homepage);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='Hobbies' 
+    getComponent={(location, callback)=> {
+  		if (Auth.isUserAuthenticated()) {
+          callback(null, Hobbies);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='/signup' component={SignUpPage} />
+    <Route path='/login' component={LoginPage} />
+    <Route path= '/logout'
+    onEnter={(nextState, replace) => {
+        Auth.deauthenticateUser();
 
+        // change the current URL to /
+        replace('/login');
+    }} />
+    <IndexRoute 
+    getComponent={(location, callback)=> {
+  		if (Auth.isUserAuthenticated()) {
+          callback(null, Homepage);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} /> 
   </Route>
 
 );
