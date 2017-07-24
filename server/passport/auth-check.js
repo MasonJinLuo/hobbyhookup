@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-db = require('../../models')
+var db = require('../../models');
 const config = require('../../config');
 
 
@@ -30,15 +30,43 @@ module.exports = (req, res, next) => {
     //   return next();
     // });
 
-    return db.User.findById(userId).then(function (user) {
+    // return db.User.findById(userId).then(function (user) {
+      return db.User.findOne({where: {id: userId}}).then(function (user){
         if (!user) { 
           console.log("no user")
           // return done(null, false, { message: 'Incorrect credentials.' })
           return res.status(401).end()
+        } 
+        if (user){       
+          req.user = user;
+          return db.User2Hobby.findAll({where: {user_id: userId}}).then(function(hobbies){
+            req.user.dataValues.hobbyObject = {hobbies: []};
+            if (hobbies){
+              // console.log(hobbies);
+              // req.user.dataValues.hobbyObject = {hobbies : hobbies}
+              hobbyObject = {hobbies : hobbies};
+              req.user.dataValues.hobbyObject = hobbyObject;
+              // console.log(req.user);
+              // console.log('returning next now')
+              // return next();  
+            }
+            return db.Chat.findAll({where: {receiver: user.username}}).then(function(inboxChats){
+            req.user.dataValues.inboxChatObject = {inboxChats: []};
+            if (inboxChats){
+              // req.user.dataValues.inboxChatObject = {inboxChats : inboxChats}
+              inboxChatObject = {inboxChats : inboxChats};
+              req.user.dataValues.inboxChatObject = inboxChatObject;
+              // console.log(req.user);
+              // console.log('returning next now')
+              // return next();  
+            }
+            console.log('returning next now')
+            return next();
+          })
+          
+          })
         }
-        req.user = user;
-        req.username = user.username;
-      return next();
+      // return next();
     });
   });
 };

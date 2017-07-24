@@ -93,3 +93,8 @@ insert into Chats (sender, receiver, message) values ( 'KingKong', 'Birdman', 'G
 insert into Chats (sender, receiver, message) values ( 'OdyMon', 'TomCat', 'Why?!');
 insert into Chats (sender, receiver, message) values ( 'TomCat', 'OdyMon', 'Because you missed my birthday Party');
 insert into Chats (sender, receiver, message) values ( 'BirdMan', 'KingKong', 'Cool! I will be your wingman, get it!? because i am a bird!');
+
+
+in 'user2hobbies' NEED TO CREATE NEW COLUMN 'hobby_name', 'hobby_url', and 'hobby_image_url' for ease of accessing hobbies in profile
+
+i set 'profile' class to userHobby instead of using ids - might need to alter css to recenter hobby name (and currently links hobby id not hobby name
