@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+var Router = require('react-router');
+var Link = require("react-router").Link;
 
 	// componentDidMount: function() {
 	// 	$.ajax({
@@ -35,10 +37,10 @@ const Inbox = ({ user }) => (
 			    		<span className="glyphicon glyphicon-list"></span> 
 			    	</button>
 			    	<div className="dropdown-content">
-					    <a href="#">Profile</a>
-					    <a href="#">Inbox</a>
-					    <a href="#">Update</a>
-					    <a href="#">Logout</a>
+					    <Link to="/profile">Profile</Link>		
+						<Link to="/inbox">Inbox</Link>	
+						<Link to="/profile/update">Update</Link>
+						<Link to="/logout">Logout</Link>
 					</div>
 			    </div>
 			  </div>

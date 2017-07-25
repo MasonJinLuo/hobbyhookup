@@ -1,4 +1,7 @@
 import React, { PropTypes } from 'react';
+var Router = require('react-router');
+var Link = require("react-router").Link;
+
 // import { Card, CardTitle, CardText } from 'material-ui/Card';
 
 //Create constructor here instead?
@@ -80,10 +83,10 @@ const Profile = ({ user }) => (
                                 <span className="glyphicon glyphicon-list"></span> 
                             </button>
                             <div className="dropdown-content">
-                                <a href="#">Profile</a>
-                                <a href="#">Inbox</a>
-                                <a href="#">Update</a>
-                                <a href="#">Logout</a>
+                              <Link to="/profile">Profile</Link>    
+                              <Link to="/inbox">Inbox</Link>  
+                              <Link to="/profile/update">Update</Link>
+                              <Link to="/logout">Logout</Link>
                             </div>
                         </div>
                       </div>
@@ -119,7 +122,7 @@ const Profile = ({ user }) => (
               {user.hobbyObject.hobbies.map(function(hobby, i) {
               return (
                 <div className ="col-lg-4 col-sm-6 col-xs-12" key={i}>
-                <a href="#" target='_blank'><h4 className="userHobby">{hobby.hobby_id}</h4></a>
+                <a href="#" target='_blank'><h4 className="userHobby">{hobby.Hobby.name}</h4></a>
                 <a href="#">
                     <img src="http://placehold.it/800x600" className="thumbnail img-responsive"></img>
                   </a>

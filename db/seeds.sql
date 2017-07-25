@@ -99,4 +99,18 @@ in 'user2hobbies' NEED TO CREATE NEW COLUMN 'hobby_name', 'hobby_url', and 'hobb
 
 in chats NEED TO INCLUDE IN QUERY OR CREATE NEW COLUMNS 'sending user image url' and 'receiving user image url'
 
+in chats need to figure out how to link to corresponding message query by clicking on sending user name
+
 i set 'profile' class to userHobby instead of using ids - might need to alter css to recenter hobby name (and currently links hobby id not hobby name
+
+
+
+in hobbies add hobby_url and hobby_image_url.  Also use proper capitalization of seed data
+
+research react-router
+ADD HOBBY DB SEEDS
+ADD ROUTE FROM INBOX TO MESSAGES
+ADD EXTRA DATA IN REGISTRATION OR profile/update
+search bar
+
+

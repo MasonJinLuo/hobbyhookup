@@ -39,16 +39,11 @@ module.exports = (req, res, next) => {
         } 
         if (user){       
           req.user = user;
-          return db.User2Hobby.findAll({where: {user_id: userId}}).then(function(hobbies){
+          return db.User2Hobby.findAll({include: [db.Hobby], where: {user_id: userId}}).then(function(hobbies){
             req.user.dataValues.hobbyObject = {hobbies: []};
             if (hobbies){
-              // console.log(hobbies);
-              // req.user.dataValues.hobbyObject = {hobbies : hobbies}
               hobbyObject = {hobbies : hobbies};
               req.user.dataValues.hobbyObject = hobbyObject;
-              // console.log(req.user);
-              // console.log('returning next now')
-              // return next();  
             }
             return db.Chat.findAll({where: {receiver: user.username}}).then(function(inboxChats){
             req.user.dataValues.inboxChatObject = {inboxChats: []};

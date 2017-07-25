@@ -1,6 +1,7 @@
-var React = require("react");
-var Router = require('react-router');
+// var React = require("react");
+// var Router = require('react-router');
 
+<<<<<<< Updated upstream
 var Login = React.createClass({
 	componentDidMount() {
         window.scrollTo(0, 0);
@@ -15,7 +16,19 @@ var Login = React.createClass({
 			</div>
 		);
 	}
+=======
+// var Login = React.createClass({
+// 	render: function(){
+// 		return (
+// 			<div className="container">
+// 				<div className="jumbotron head">
+// 					<h1> This is Login Page </h1>
+// 				</div>
+// 			</div>
+// 		);
+// 	}
+>>>>>>> Stashed changes
 
-});
+// });
 
-module.exports = Login;
+// module.exports = Login;

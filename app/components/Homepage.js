@@ -40,10 +40,10 @@ var Homepage = React.createClass({
 									<span className="glyphicon glyphicon-list"></span> 
 									</button>
 									<div className="dropdown-content">
-									<a href="#">Profile</a>
-									<a href="#">Inbox</a>
-									<a href="#">Update</a>
-									<a href="#">Logout</a>
+									<Link to="/profile">Profile</Link>		
+									<Link to="/inbox">Inbox</Link>	
+									<Link to="/update">Update</Link>
+									<Link to="/logout">Logout</Link>
 									</div>
 								</div>
 							</div>
@@ -70,8 +70,8 @@ var Homepage = React.createClass({
 
 					<nav id="nav">
 						<ul className="links">
-							<li className="active"><a href="index.html">Hobby Hookup</a></li>
-							<Link to="/Profile"><li><a href="profile.html">About Us</a></li></Link>
+							<li className="active"><Link to ="/">Hobby Hookup</Link></li>
+							<Link to="/"><li><a href="#">About Us</a></li></Link>
 						</ul>
 						<ul className="icons">
 							<li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
@@ -92,9 +92,9 @@ var Homepage = React.createClass({
 									Join Thousands of Urban and Rural Beekeepers.<br></br>
 									</p>
 								</header>
-								<Link to="/HobbyBeeKeeping"><a href="#" className="image main"><img src="images/bees.jpeg" alt="" /></a></Link>
+								<Link to="/hobby/beekeeping" className="image main"><img src="images/bees.jpeg" alt="" /></Link>
 								<ul className="actions">
-									<Link to="/HobbyBeeKeeping"><li><a href="#" className="button big">Match Now!</a></li></Link>
+									<Link to="/hobby/beekeeping"><li><a href="#" className="button big">Match Now!</a></li></Link>
 								</ul>
 							</article>
 
@@ -105,9 +105,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Speed Reading<br></br></a></h2>
 									</header>
-									<Link to="/HobbySpeedReading"><a href="#" className="image fit"><img src='images/beach.jpg' alt="" /></a></Link>
+									<Link to="/hobby/speedreading"><a href="#" className="image fit"><img src='images/beach.jpg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbySpeedReading"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/speedreading"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -115,9 +115,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Rock Climbing<br></br></a></h2>
 									</header>
-									<Link to="/HobbyRockClimbing"><a href="#" className="image fit"><img src='images/rock.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/rockclimbing"><a href="#" className="image fit"><img src='images/rock.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyRockClimbing"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/rockclimbing"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -125,9 +125,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Mixing Music<br></br></a></h2>
 									</header>
-									<Link to="/HobbyMixingMusic"><a href="#" className="image fit"><img src='images/dj.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/mixingmusic"><a href="#" className="image fit"><img src='images/dj.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyMixingMusic"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/mixingmusic"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -135,9 +135,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Bird Watching<br></br></a></h2>
 									</header>
-									<Link to="/HobbyBirdWatching"><a href="#" className="image fit"><img src='images/bird.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/birdwatching"><a href="#" className="image fit"><img src='images/bird.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyBirdWatching"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/birdwatching"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -145,9 +145,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Cycling<br></br></a></h2>
 									</header>
-									<Link to="/HobbyCycling"><a href="#" className="image fit"><img src='images/bike.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/cycling"><a href="#" className="image fit"><img src='images/bike.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyCycling"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/cycling"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -155,9 +155,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Body Building<br></br></a></h2>
 									</header>
-									<Link to="/HobbyBodyBuilding"><a href="#" className="image fit"><img src='images/lifting.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/bodybuilding"><a href="#" className="image fit"><img src='images/lifting.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyBodyBuilding"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/bodybuilding"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -165,9 +165,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Beer Tasting<br></br></a></h2>
 									</header>
-									<Link to="/HobbyBeerTasting"><a href="#" className="image fit"><img src='images/beer.jpg' alt="" /></a></Link>
+									<Link to="/hobby/beertasting"><a href="#" className="image fit"><img src='images/beer.jpg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyBeerTasting"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/beertasting"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -175,9 +175,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Parkour<br></br></a></h2>
 									</header>
-									<Link to="/HobbyParkour"><a href="#" className="image fit"><img src='images/park.jpg' alt="" /></a></Link>
+									<Link to="/hobby/parkour"><a href="#" className="image fit"><img src='images/park.jpg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyParkour"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/parkour"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -185,9 +185,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Photography<br></br></a></h2>
 									</header>
-									<Link to="/HobbyPhotography"><a href="#" className="image fit"><img src='images/photo.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/photography"><a href="#" className="image fit"><img src='images/photo.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbyPhotography"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/photography"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
@@ -195,9 +195,9 @@ var Homepage = React.createClass({
 									<header>
 									<h2><a href="#">Salsa Dancing<br></br></a></h2>
 									</header>
-									<Link to="/HobbySalsaDancing"><a href="#" className="image fit"><img src='images/salsa.jpeg' alt="" /></a></Link>
+									<Link to="/hobby/salsadancing"><a href="#" className="image fit"><img src='images/salsa.jpeg' alt="" /></a></Link>
 									<ul className="actions">
-									<li><Link to="/HobbySalsaDancing"><a href="#" className="button">Match Now!</a></Link></li>
+									<li><Link to="/hobby/salsadancing"><a href="#" className="button">Match Now!</a></Link></li>
 									</ul>
 								</article>
 
