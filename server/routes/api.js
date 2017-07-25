@@ -24,4 +24,13 @@ router.get('/profile', (req, res) => {
   console.log('api.js end')
 });
 
+router.get('/inbox', (req, res) => {
+  console.log('api.js start')
+  console.log(req.user)
+  res.status(200).json({
+    user: req.user
+  });
+  console.log('api.js end')
+});
+
 module.exports = router;

@@ -20,7 +20,7 @@ var HobbyPhotography = require('../components/HobbyPhotography')
 var HobbySalsaDancing = require('../components/HobbySalsaDancing')
 // var Profile = require('../components/Profile')
 var Messages = require('../components/Messages')
-var Inbox = require('../components/Inbox')
+// var Inbox = require('../components/Inbox')
 
 var Hobbies = require('../components/Hobbies')
 import Base from '../components/login/Base.jsx';
@@ -30,6 +30,7 @@ import LoginPage from '../components/login/LoginPage.jsx';
 import SignUpPage from '../components/login/SignUpPage.jsx';
 import Auth from '../components/login/Auth';
 import Profile from '../components/profile/ProfilePage.jsx';
+import Inbox from '../components/inbox/InboxPage.jsx';
 
     // <Route path='/dashboard' component={DashboardPage} />
 module.exports = (

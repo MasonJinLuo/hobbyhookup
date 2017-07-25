@@ -103,7 +103,7 @@ const Profile = ({ user }) => (
                               <h4 className="profName">
                                   {user.username}
                               </h4>
-                              <small><cite title="San Francisco, USA">{user.location}<i className="glyphicon glyphicon-map-marker">
+                              <small><cite title="location">{user.location}<i className="glyphicon glyphicon-map-marker">
                               </i></cite></small>
                               <p>
                                   <i className="glyphicon glyphicon-user"></i>{user.age}

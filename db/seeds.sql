@@ -97,4 +97,6 @@ insert into Chats (sender, receiver, message) values ( 'BirdMan', 'KingKong', 'C
 
 in 'user2hobbies' NEED TO CREATE NEW COLUMN 'hobby_name', 'hobby_url', and 'hobby_image_url' for ease of accessing hobbies in profile
 
+in chats NEED TO INCLUDE IN QUERY OR CREATE NEW COLUMNS 'sending user image url' and 'receiving user image url'
+
 i set 'profile' class to userHobby instead of using ids - might need to alter css to recenter hobby name (and currently links hobby id not hobby name
