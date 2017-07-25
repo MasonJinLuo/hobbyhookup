@@ -193,13 +193,13 @@ module.exports = (
           callback(null, LoginPage);
         }
     }} />
-    <Route path='/hobby/:hobby' getComponent={(location, callback)=> {
-      if (Auth.isUserAuthenticated()) {
-          callback(null, Hobby);
-        } else {
-          callback(null, LoginPage);
-        }
-    }} />
+//    <Route path='/hobby/:hobby' getComponent={(location, callback)=> {
+//      if (Auth.isUserAuthenticated()) {
+//          callback(null, Hobby);
+//        } else {
+//          callback(null, LoginPage);
+//       }
+//    }} />
     <Route path='/message' getComponent={(location, callback)=> {
       if (Auth.isUserAuthenticated()) {
           callback(null, Messages);
