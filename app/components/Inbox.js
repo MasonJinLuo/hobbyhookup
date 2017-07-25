@@ -2,15 +2,14 @@
 // var Router = require('react-router');
 // var Link = require("react-router").Link;
 
-<<<<<<< Updated upstream
-var Inbox = React.createClass({	
-	componentDidMount() {
-        window.scrollTo(0, 0);
-	},
-	
-=======
+
 // var Inbox = React.createClass({	
->>>>>>> Stashed changes
+// 	componentDidMount() {
+//         window.scrollTo(0, 0);
+// 	},
+	
+
+// var Inbox = React.createClass({	
 
 // 	// componentDidMount: function() {
 // 	// 	$.ajax({

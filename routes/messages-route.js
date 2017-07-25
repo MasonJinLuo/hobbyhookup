@@ -15,7 +15,7 @@ app.get('/messages', function(req, res) {
 		});
 	}
 
-	var promises = [findMessages('TomCat', 'OdyMon'), findMessages('OdyMon', 'TomCat')];
+	var promises = [findMessages(req.query.sender , req.query.receiver), findMessages(req.query.receiver , req.query.sender)];
 	Promise.all(promises).then(function(response){
 		res.json(response)
 
@@ -23,4 +23,30 @@ app.get('/messages', function(req, res) {
 
 
 	});
+
+
+app.post('/api/sendMessage', function(req, res){
+	var newMessage = {
+        sender: req.body.sender,
+        receiver: req.body.receiver,
+        message: req.body.message
+        };
+	db.Chat.create(newMessage).then(() => {
+		res.send("done")
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
