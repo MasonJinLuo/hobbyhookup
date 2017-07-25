@@ -3,6 +3,10 @@ var Router = require('react-router');
 var Matches = require('./Matches')
 
 var HobbyBodyBuilding = React.createClass({
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
+	
 	getInitialState: function() {
 		return {
 	      results: [],

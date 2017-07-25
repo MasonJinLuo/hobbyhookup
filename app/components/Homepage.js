@@ -6,6 +6,9 @@ var Link = require("react-router").Link;
 import Intro from './intro.component.react.js';
 
 var Homepage = React.createClass({
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
 
 	render: function(){
 		return (

@@ -3,6 +3,10 @@ var Router = require('react-router');
 var Link = require("react-router").Link;
 
 var Inbox = React.createClass({	
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
+	
 
 	// componentDidMount: function() {
 	// 	$.ajax({

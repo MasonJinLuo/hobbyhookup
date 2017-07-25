@@ -2,6 +2,10 @@ var React = require("react");
 var Router = require('react-router');
 var Matches = require('./Matches')
 var Hobbies = React.createClass({
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
+	
 	getInitialState: function() {
 		return {
 	      results: [],

@@ -2,6 +2,10 @@ var React = require("react");
 var Router = require('react-router');
 
 var Login = React.createClass({
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
+	
 	render: function(){
 		return (
 			<div className="container">

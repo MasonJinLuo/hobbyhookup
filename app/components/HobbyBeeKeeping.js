@@ -5,6 +5,10 @@ var Link = require("react-router").Link;
 
 
 var HobbyBeeKeeping = React.createClass({
+	componentDidMount() {
+        window.scrollTo(0, 0);
+	},
+	
 	getInitialState: function() {
 		return {
 	      results: [],
