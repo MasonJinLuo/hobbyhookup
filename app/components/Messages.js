@@ -60,7 +60,7 @@ var Messages = React.createClass({
 		</div>
 					
 		<h2> Messages </h2>
-		<div className="row">
+		{/*<div className="row">
 			<div className="col-sm-8 col-sm-offset-2">
                     <div id="chat-window" className="panel panel-default">
        
@@ -78,6 +78,51 @@ var Messages = React.createClass({
                         </div>
                     </div>
             </div>
+		</div>*/}
+		<div className="row">
+			<div className="col-sm-8 col-sm-offset-2">
+                    <div id="chat-window" className="panel panel-default">
+       
+                        <div id="chat-panel" className="panel-heading">
+                        	<h4> Chat with Name </h4>
+                        </div>
+                        <div className="panel-footer">
+                            <div className="input-group">
+                                <input id="chat-user" type="hidden"></input>
+                                <input id="chat-input" type="text" className="form-control input-sm chat_input" placeholder="Type your message here..."></input> <span className="input-group-btn">
+                                    <button id="chat-send" className="btn btn-sm btn-snack" style={{color:'white'}}>Send</button>
+                                </span> 
+                            </div>
+                        </div>
+                        <div id="chat-panel" className="panel-body">
+                        	<div className="row">
+                        		<div id="chat-panel" className="panel-body">
+                        			<div className="col-sm-2 col-md-2">
+    			             		   <img src="http://placehold.it/100x100" alt="" className="img-circle img-responsive" />
+    			            		</div>
+    			            		<div className="col-sm-10 col-md-10">
+    			             		   <p> Message will go here Message will go here Message will go here Message will go here</p>
+    			            		</div>
+    			            	</div>
+                        	</div>
+                        </div>
+                        <div id="chat-panel" className="panel-body">
+                        	<div className="row">
+                        		<div id="chat-panel" className="panel-body">
+                        			<div className="col-sm-2 col-md-2">
+    			             		   <img src="http://placehold.it/100x100" alt="" className="img-circle img-responsive" />
+    			            		</div>
+                        			<div className="col-sm-10 col-md-10">
+    			             		   <p> Message will go here Message will go here Message will go here Message will go here</p>
+    			            		</div>
+    			            	</div>
+                        	</div>
+                        </div>                       
+                    </div>
+            	</div>
+		</div>
+		<div id="copyright">
+			<ul><li>&copy; Hobby Hookup</li></ul>
 		</div>
 	</div>
 	);
