@@ -10,7 +10,7 @@ class InboxPage extends React.Component {
    */
   constructor(props) {
     super(props);
-
+    this.handleUserClick = this.handleUserClick.bind(this);
     this.state = {  
       secretData: '',
       username: '',
@@ -22,6 +22,13 @@ class InboxPage extends React.Component {
     };
   }
 
+  // handleUserClick(){
+  //   console.log('this is: ', this)
+  // }
+  handleUserClick(data){
+    console.log('this is:', this);
+    console.log('username clicked is:', data)
+  }
   /**
    * This method will be executed after initial rendering.
    */
@@ -48,14 +55,26 @@ class InboxPage extends React.Component {
     xhr.send();
   }
 
+  // handleUserClick(data) {
+  //   console.log(data)
+  // //If they click, saves the selected Article
+  //   // var headline = article.headline.main;
+  //   // var url = article.web_url;
+  //   // var date = article.pub_date;
+
+  //   // this.props.saveArticle(headline, url, date);
+  // }
+
   /**
    * Render the component.
    */
   render() {
     // return (<Dashboard secretData={this.state.secretData} />); 
-    return (<Inbox user={this.state.user} />)
+    return (<Inbox user={this.state.user} handleUserClick={this.handleUserClick} />)
     // return (<Dashboard secretData={this.state.username} />)
   }
+
+
 
 }
 

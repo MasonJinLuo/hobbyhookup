@@ -9,7 +9,9 @@ var Link = require("react-router").Link;
 	// 	})
 	// },
 
-const Inbox = ({ user }) => (
+
+
+const Inbox = ({ user, handleUserClick }) => (
 	<div>
 		<div className="container navContainer">
 			<nav className="navbar navbar-default">
@@ -61,7 +63,7 @@ const Inbox = ({ user }) => (
               {user.inboxChatObject.inboxChats.map(function(chat, i) {
               return (
                 <div className ="col-lg-12 col-sm-12 col-xs-12" key={i}>               
-                <a href="#" target='_blank'><h4 className="messageSender">{chat.sender}</h4></a>
+                <a href="#" onClick={() => handleUserClick(chat.sender)}><h4 className="messageSender">{chat.sender}</h4></a>
                 <p className="inboxMessage">{chat.message}</p>
               </div>
               );
