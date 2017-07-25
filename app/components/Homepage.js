@@ -48,7 +48,15 @@ var Homepage = React.createClass({
 						</nav>	
 					</div>
 
-					<Intro/>
+					{/* <div id="intro">
+						<h1>Hobby test
+						<br></br>
+						Hookup</h1>
+						<p>Find Your Next Passion.</p>
+						<ul className="actions">
+							<li><a href="#header" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>*/}
 
 				
 					<header id="header">
