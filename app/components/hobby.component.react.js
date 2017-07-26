@@ -3,6 +3,7 @@
 // var Link = require("react-router").Link;
 
 // var Hobby = React.createClass({
+	
 
 // 	render: function(){
 // 		return (
