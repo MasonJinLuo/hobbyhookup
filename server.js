@@ -7,6 +7,8 @@ var path = require("path");
 var passport = require('passport')
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var sequelize_fixtures = require('sequelize-fixtures');
+var models = require('./models');
 
 // Sets up the Express App
 // =============================================================
@@ -81,8 +83,12 @@ res.sendFile(__dirname + '/public/index.html')
 
 
 // Syncing our sequelize models and then starting our express app
+
 hobbyhookupdb.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
+	sequelize_fixtures.loadFile('db/seed.json', models).then(function(){
+        app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
+    	});
     });
+
 });
