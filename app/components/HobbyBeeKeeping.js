@@ -3,14 +3,37 @@ var Router = require('react-router');
 var Matches = require('./Matches');
 var Link = require("react-router").Link;
 
+import Auth from './login/Auth';
 
 var HobbyBeeKeeping = React.createClass({
 	componentDidMount() {
         window.scrollTo(0, 0);
-	},
+        const xhr = new XMLHttpRequest();
+    	xhr.open('get', '/api/hobby');
+   		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    	// set the authorization HTTP header
+    	xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
+    	xhr.responseType = 'json';
+    	console.log('didmount hit');
+    	xhr.addEventListener('load', () => {
+      	if (xhr.status === 200) {
+        // console.log(xhr.response)
+        console.log(xhr.response.username)
+        this.setState({
+          // secretData: xhr.response.message,
+          // user: xhr.response.message,
+          user: xhr.response.user
+          // hobbies: xhr.response.hobbies
+          // username: xhr.response.username
+        });
+      	}
+    	});
+    	xhr.send();
+  	},
 	
 	getInitialState: function() {
 		return {
+	      user: {},
 	      results: [],
 	      matchName1: "Name",
 	      matchImg1: "http://placehold.it/800x600",
