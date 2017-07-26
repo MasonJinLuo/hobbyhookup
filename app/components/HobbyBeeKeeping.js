@@ -24,7 +24,7 @@ var HobbyBeeKeeping = React.createClass({
 	fetchData : function(){
 		$.ajax({
   			method: "GET",
-  			url: "/beekeeping"
+  			url: "/api/beekeeping"
 		})
 		  .then(function(data) {
 		  	console.log(data)
@@ -71,10 +71,10 @@ var HobbyBeeKeeping = React.createClass({
 			        		<span className="glyphicon glyphicon-list"></span> 
 			        	</button>
 			        	<div className="dropdown-content">
-						    <a href="#">Profile</a>
-						    <Link to="/Inbox"><a href="#">Inbox</a></Link>
-						    <a href="#">Update</a>
-						    <a href="#">Logout</a>
+						    <Link to="/profile">Profile</Link>        
+	                        <Link to="/inbox">Inbox</Link>    
+	                        <Link to="/profile/update">Update</Link>
+	                        <Link to="/logout">Logout</Link>
 						</div>
 			        </div>
 			      </div>

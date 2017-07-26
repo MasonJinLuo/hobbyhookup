@@ -1,6 +1,7 @@
 var React = require("react");
 var Router = require('react-router');
-var Matches = require('./Matches')
+var Matches = require('./Matches');
+var Link = require("react-router").Link;
 var Hobbies = React.createClass({
 	componentDidMount() {
         window.scrollTo(0, 0);
@@ -68,10 +69,10 @@ var Hobbies = React.createClass({
 			        		<span className="glyphicon glyphicon-list"></span> 
 			        	</button>
 			        	<div className="dropdown-content">
-						    <a href="#">Profile</a>
-						    <a href="#">Inbox</a>
-						    <a href="#">Update</a>
-						    <a href="#">Logout</a>
+						    <Link to="/profile">Profile</Link>        
+	                        <Link to="/inbox">Inbox</Link>    
+	                        <Link to="/profile/update">Update</Link>
+	                        <Link to="/logout">Logout</Link>
 						</div>
 			        </div>
 			      </div>
