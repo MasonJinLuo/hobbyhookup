@@ -4,6 +4,14 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.STRING,
 			allowNull: false
 		},
+		hobby_url: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
+		hobby_image: {
+			type: DataTypes.STRING,
+			allowNull: false
+		},
 		createdAt: {
 			type: DataTypes.DATE,
 			field: "createdAt",
