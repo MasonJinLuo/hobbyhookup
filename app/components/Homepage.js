@@ -86,7 +86,7 @@ var Homepage = React.createClass({
 						
 							<article className="post featured">
 								<header className="major">
-									<h2><a href="#">Featured Hobby of July:<br></br>
+									<h2><a href="#">TEST Featured Hobby of July:<br></br>
 									Beekeeping</a></h2>
 									<p>Become one with the Hive.<br></br>
 									Join Thousands of Urban and Rural Beekeepers.<br></br>
