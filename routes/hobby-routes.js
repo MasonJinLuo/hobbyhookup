@@ -282,7 +282,16 @@ module.exports = function(app) {
 
 
 
-
+app.post('/api/addHobby', function(req,res){
+    var addHobby = {
+        level: req.body.level,
+        user_id: req.body.user_id,
+        hobby_id: req.body.hobby_id
+        };
+    db.User2Hobby.create(addHobby).then(() => {
+        res.send("done")
+    });
+});
 
 
 

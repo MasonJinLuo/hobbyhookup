@@ -44,6 +44,10 @@ var HobbyBeeKeeping = React.createClass({
 	    }
 	},
 
+	addHobby : function(){
+		console.log(this.state.user.id)
+	},
+
 	fetchData : function(){
 		$.ajax({
   			method: "GET",
@@ -63,6 +67,48 @@ var HobbyBeeKeeping = React.createClass({
 		    console.log('Hello ', this.state.matchName1)
 		    // console.log('bye ', this.state.results[0].Hobby)
 		  }.bind(this));
+	},
+
+	addNovice: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Novice",
+                user_id: this.state.user.id,
+                hobby_id: 1
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
+	},
+
+	addIntermediate: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Intermediate",
+                user_id: this.state.user.id,
+                hobby_id: 1
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
+	},
+
+	addExpert: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Expert",
+                user_id: this.state.user.id,
+                hobby_id: 1
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
 	},
 
 	render: function(){
@@ -110,8 +156,17 @@ var HobbyBeeKeeping = React.createClass({
 					<h2><a href="#">Beekeeping</a></h2>				
 				</header>
 				<a href="#" className="image main"><img src="http://68.media.tumblr.com/0f639d964052eff7a7f69a4a49123c88/tumblr_ntsra7yF4e1riijaro1_1280.jpg" alt="" /></a>
+				<div className="dropdown2">
+			  		<button className="dropbtn2">+</button>
+			  		<div className="dropdown-content2">
+			    		<button onClick={this.addNovice}>Novice</button>
+			    		<button onClick={this.addIntermediate}>Intermediate</button>
+			    		<button onClick={this.addExpert}>Expert</button>
+			  		</div>
+				</div>
+			
 				<ul className="actions">
-					<li><button className="button big" id="connectBTN" onClick={this.fetchData}>Connect</button></li>
+					<li><button className="connectBTN" id="connectBTN" onClick={this.fetchData}>Connect</button></li>
 				</ul>
 			</article>
 			<div className="matches">
@@ -124,8 +179,6 @@ var HobbyBeeKeeping = React.createClass({
 			<ul><li>&copy; Hobby Hookup</li></ul>
 		</div>
 	</div>
-
-
 
 		);
 	}

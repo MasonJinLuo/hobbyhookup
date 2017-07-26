@@ -65,6 +65,48 @@ var HobbyParkour = React.createClass({
 		  }.bind(this));
 	},
 
+	addNovice: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Novice",
+                user_id: this.state.user.id,
+                hobby_id: 9
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
+	},
+
+	addIntermediate: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Intermediate",
+                user_id: this.state.user.id,
+                hobby_id: 9
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
+	},
+
+	addExpert: function(){
+		    $.ajax({
+            method: "POST",
+            url: "/api/addHobby",
+              data: {
+                level: "Expert",
+                user_id: this.state.user.id,
+                hobby_id: 9
+              }
+          }).then(function(done){
+             $(".dropdown2").empty();
+          });
+	},
+
 	render: function(){
 		return (
 			<div>
@@ -110,8 +152,17 @@ var HobbyParkour = React.createClass({
 					<h2><a href="#">Parkour</a></h2>				
 				</header>
 				<a href="#" className="image main"><img src="https://c1.staticflickr.com/6/5498/12127113904_45f5cd9788_b.jpg" alt="" /></a>
+				<div className="dropdown2">
+			  		<button className="dropbtn2">+</button>
+			  		<div className="dropdown-content2">
+			    		<button onClick={this.addNovice}>Novice</button>
+			    		<button onClick={this.addIntermediate}>Intermediate</button>
+			    		<button onClick={this.addExpert}>Expert</button>
+			  		</div>
+				</div>
+			
 				<ul className="actions">
-					<li><button className="button big" id="connectBTN" onClick={this.fetchData}>Connect</button></li>
+					<li><button className="connectBTN" id="connectBTN" onClick={this.fetchData}>Connect</button></li>
 				</ul>
 			</article>
 			<div className="matches">
