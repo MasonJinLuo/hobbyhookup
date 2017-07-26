@@ -3,12 +3,35 @@ var Router = require('react-router');
 var Link = require("react-router").Link;
 
 // import Hobby from './hobby.component.react.js';
+import Auth from './login/Auth';
 import Intro from './intro.component.react.js';
 
 var Homepage = React.createClass({
 	componentDidMount() {
         window.scrollTo(0, 0);
-	},
+        const xhr = new XMLHttpRequest();
+    	xhr.open('get', '/api/homepage');
+   		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    	// set the authorization HTTP header
+    	xhr.setRequestHeader('Authorization', `bearer ${Auth.getToken()}`);
+    	xhr.responseType = 'json';
+    	console.log('didmount hit');
+    	xhr.addEventListener('load', () => {
+      	if (xhr.status === 200) {
+        // console.log(xhr.response)
+        console.log(xhr.response.user)
+        this.setState({
+          // secretData: xhr.response.message,
+          // user: xhr.response.message,
+          user: xhr.response.user
+          // hobbies: xhr.response.hobbies
+          // username: xhr.response.username
+        });
+      	}
+    	});
+    	xhr.send();
+  	},
+
 
 	render: function(){
 		return (
