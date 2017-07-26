@@ -6,11 +6,6 @@ var Main = React.createClass({
 	componentDidMount() {
         window.scrollTo(0, 0);
 	},
-	
-	signUp: function(){
-		console.log("signup class is working")
-		location.href = "Login"
-	},
 
 	render: function(){
 		return (

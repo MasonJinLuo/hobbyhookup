@@ -109,15 +109,15 @@ var Homepage = React.createClass({
 						
 							<article className="post featured">
 								<header className="major">
-									<h2><a href="#">Featured Hobby of July:<br></br>
-									Beekeeping</a></h2>
+									<h2><Link to="/hobby/beekeeping"> Featured Hobby of July:<br></br>
+									Beekeeping</Link></h2>
 									<p>Become one with the Hive.<br></br>
 									Join Thousands of Urban and Rural Beekeepers.<br></br>
 									</p>
 								</header>
 								<Link to="/hobby/beekeeping" className="image main"><img src="images/bees.jpeg" alt="" /></Link>
 								<ul className="actions">
-									<Link to="/hobby/beekeeping"><li><a href="#" className="button big">Match Now!</a></li></Link>
+									<li><Link to="/hobby/speedreading"><a href="#" className="button">Match Now!</a></Link></li>
 								</ul>
 							</article>
 
