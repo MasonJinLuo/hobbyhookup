@@ -59,8 +59,8 @@
             "model": "Hobby",
             "data": {
                 "name": "beer tasting",
-                "hobby_image": "/hobby/beertasting",
-                "hobby_url": "http://www.manhattanwithatwist.com/wp-content/uploads/2014/01/beer_tasting_flight.jpg"
+                "hobby_url": "/hobby/beertasting",
+                "hobby_image": "http://www.manhattanwithatwist.com/wp-content/uploads/2014/01/beer_tasting_flight.jpg"
             }
         },
         {
@@ -92,7 +92,7 @@
             "data": {
                 "email": "monkey@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "https://artifactsjournal.missouri.edu/wp-content/uploads/2014/04/Fig-3-Cla.jpg",
                 "first_name": "King",
                 "last_name": "Kong",
                 "username": "KingKong",
@@ -106,7 +106,7 @@
             "data": {
                 "email": "cat@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "http://4.bp.blogspot.com/-Y3wqBqEZIJc/TkXHgIaRW_I/AAAAAAAAArg/UkFmg9j4ZuY/s1600/Tom-and-Jerry-Cartoons-+6.jpg",
                 "first_name": "Tom",
                 "last_name": "Cat",
                 "username": "TomCat",
@@ -134,7 +134,7 @@
             "data": {
                 "email": "bird@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "http://i.cdn.turner.com/asfix/repository//8a25c392127763f00112776b1ff20001/harvey_ep003_12.jpg",
                 "first_name": "Bird",
                 "last_name": "Man",
                 "username": "BirdMan",
@@ -148,7 +148,7 @@
             "data": {
                 "email": "racoon@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "https://i.ytimg.com/vi/4olSy5UXO_M/hqdefault.jpg",
                 "first_name": "Sneaky",
                 "last_name": "Racoon",
                 "username": "SneakyRacoon",
@@ -162,7 +162,7 @@
             "data": {
                 "email": "pig@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "https://i.ytimg.com/vi/0pYHzT8imdA/hqdefault.jpg",
                 "first_name": "Porky",
                 "last_name": "Pig",
                 "username": "PorkyPig",
@@ -176,7 +176,7 @@
             "data": {
                 "email": "chicken@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "https://previews.123rf.com/images/cthoman/cthoman1506/cthoman150600646/41845284-A-cartoon-chicken-leg-happy-and-smiling--Stock-Vector.jpg",
                 "first_name": "Fried",
                 "last_name": "Chicken",
                 "username": "FriedChicken",
@@ -190,7 +190,7 @@
             "data": {
                 "email": "monster@gmail.com",
                 "password": "12345678",
-                "image_path": "https://impactspace.com/images/uploads/person-default.png",
+                "image_path": "http://static.tvtropes.org/pmwiki/pub/images/krumm.png",
                 "first_name": "Monster",
                 "last_name": "Madness",
                 "username": "MonsterMadness",

@@ -122,10 +122,8 @@ const Profile = ({ user }) => (
               {user.hobbyObject.hobbies.map(function(hobby, i) {
               return (
                 <div className ="col-lg-4 col-sm-6 col-xs-12" key={i}>
-                <a href="#" target='_blank'><h4 className="userHobby">{hobby.Hobby.name}</h4></a>
-                <a href="#">
-                    <img src="http://placehold.it/800x600" className="thumbnail img-responsive"></img>
-                  </a>
+                <Link to={hobby.Hobby.hobby_url}><h4 className="userHobby">{hobby.Hobby.name}</h4></Link>
+                    <Link to={hobby.Hobby.hobby_url}><img src={hobby.Hobby.hobby_image} className="thumbnail img-responsive"></img></Link>
               </div>
               );
               })}              
@@ -151,6 +149,8 @@ const Profile = ({ user }) => (
 //   </div>
 // );
 
+
+
 Profile.propTypes = {
   // secretData: PropTypes.string.isRequired
   user: PropTypes.object.isRequired
@@ -158,3 +158,9 @@ Profile.propTypes = {
 };
 
 export default Profile;
+
+
+// <a href="#" target='_blank'><h4 className="userHobby">{hobby.Hobby.name}</h4></a>
+//                 <a href="#">
+//                     <img src="http://placehold.it/800x600" className="thumbnail img-responsive"></img>
+//                   </a>
