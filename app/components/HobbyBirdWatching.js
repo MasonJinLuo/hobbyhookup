@@ -36,7 +36,7 @@ var HobbyBirdWatching = React.createClass({
             url: "/api/checkHobby",
               data: {
                 user_id: this.state.user.id,
-                hobby_id: 8
+                hobby_id: 5
               }
           }).then(function(done){
             console.log("Does it exist?" , done);
