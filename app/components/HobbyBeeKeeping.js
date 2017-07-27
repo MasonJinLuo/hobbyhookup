@@ -26,9 +26,32 @@ var HobbyBeeKeeping = React.createClass({
           // hobbies: xhr.response.hobbies
           // username: xhr.response.username
         });
+
+        var userId = this.state.user.id
+        console.log("userID", userId)
+              // ==================================================================================
+      //when the page loads check if the hobby is associated with the user, if it is, not allow the user to add it
+         $.ajax({
+            method: "GET",
+            url: "/api/checkHobby",
+              data: {
+                user_id: userId,
+                hobby_id: 1
+              }
+          }).then(function(done){
+            console.log("Does it exist?" , done);
+
+            if(done === "true"){
+             $(".dropdown2").empty();
+            }
+          
+          });
+      // ==================================================================================
+
+
       	}
     	});
-    	xhr.send();
+    	xhr.send();    
   	},
 	
 	getInitialState: function() {

@@ -295,4 +295,30 @@ app.post('/api/addHobby', function(req,res){
 
 
 
+
+
+//// ===========================================================================================================
+app.get('/api/checkHobby', function(req,res){
+
+    console.log("WHY WHY WHY WHY WHY?!?!?" , req.query.user_id);
+
+
+    db.User2Hobby.findOne({
+        where:{
+            user_id:  req.query.user_id,
+            hobby_id: req.query.hobby_id
+        }
+    }).then(function(check){
+    	console.log("WTF IS THIS?!" , check)
+        if (check) {
+            console.log("true");
+            res.json("true")
+        } else {
+            console.log("false")
+            res.json("false")
+        }
+    });
+    });
+
+
 }

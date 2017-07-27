@@ -26,9 +26,34 @@ var HobbyParkour = React.createClass({
           // hobbies: xhr.response.hobbies
           // username: xhr.response.username
         });
+
+                    // ==================================================================================
+      //when the page loads check if the hobby is associated with the user, if it is, not allow the user to add it
+         $.ajax({
+            method: "GET",
+            url: "/api/checkHobby",
+              data: {
+                user_id: this.state.user.id,
+                hobby_id: 9
+              }
+          }).then(function(done){
+            console.log("Does it exist?" , done);
+
+            if(done === "true"){
+             $(".dropdown2").empty();
+            }
+          
+          });
+      // ==================================================================================
+
+
+
       	}
     	});
     	xhr.send();
+
+
+
   	},
 	
 	getInitialState: function() {
