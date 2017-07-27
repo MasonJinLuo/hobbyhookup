@@ -53,7 +53,6 @@ var Link = require("react-router").Link;
    //            </div>
    //          </div>
 
-
 const Profile = ({ user }) => (
 
    <div>
@@ -62,21 +61,10 @@ const Profile = ({ user }) => (
                   <div className="container-fluid">
                     
                     <div className="navbar-header">
-                      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                      </button>
-                      <h3 className="navbar-brand" href="/home">Hobby Hookup</h3>
+                      
+                     <Link to="/"><h3 className="navbar-brand" href="/home">Hobby Hookup</h3></Link>
                     </div>
-    
-                      <form className="navbar-form navbar-left">
-                        <div className="form-group">
-                          <input type="text" className="form-control" placeholder="Search"></input>
-                        </div>
-                        <button type="submit" className="btn btn-default">Submit</button>
-                      </form>
+
                       <div className="nav navbar-nav navbar-right">
                         <div className="dropdown">
                             <button className="dropbtn btn btn-lg btn-default"> 
@@ -96,16 +84,16 @@ const Profile = ({ user }) => (
       <div className="container">
             <div id="main">
           <div className="row">
-              <div className="col-xs-12 col-sm-6 col-md-6">
-                  <div className="well well-sm">
+              <div className="col-xs-12 col-sm-12 col-md-12">
+                  <div className="well">
                       <div className="row">
-                          <div className="col-sm-6 col-md-4">
+                          <div className="col-sm-6 col-md-6">
                               <img src={user.image_path} alt="" className="img-rounded img-responsive" />
                           </div>
-                          <div className="col-sm-6 col-md-8">
-                              <h4 className="profName">
+                          <div className="col-sm-6 col-md-6">
+                              <h2 className="profName">
                                   {user.username}
-                              </h4>
+                              </h2>
                               <small><cite title="location">{user.location}<i className="glyphicon glyphicon-map-marker">
                               </i></cite></small>
                               <p>
@@ -116,19 +104,20 @@ const Profile = ({ user }) => (
                   </div>
               </div>
           </div>
-          <div className="hobbyPics">
-            <h2> Your Hobbies </h2>
-              <div className="row">
+
+          <h2> Your Hobbies </h2>
+          <section className="posts">
               {user.hobbyObject.hobbies.map(function(hobby, i) {
               return (
-                <div className ="col-lg-4 col-sm-6 col-xs-12" key={i}>
-                <Link to={hobby.Hobby.hobby_url}><h4 className="userHobby">{hobby.Hobby.name}</h4></Link>
-                    <Link to={hobby.Hobby.hobby_url}><img src={hobby.Hobby.hobby_image} className="thumbnail img-responsive"></img></Link>
-              </div>
+                <article className ="col-lg-4 col-sm-6 col-xs-12 col-middle col-height" key={i}>
+                <Link to={hobby.Hobby.hobby_url}><h3 className="userHobby">{hobby.Hobby.name}</h3></Link>
+                    <Link to={hobby.Hobby.hobby_url}><img src={hobby.Hobby.hobby_image} className="image-fit thumbnail img-responsive"></img></Link>
+                </article>
               );
               })}              
-              </div>
-            </div>
+              </section>
+              
+            
 
            
           <div id="copyright">
@@ -149,7 +138,22 @@ const Profile = ({ user }) => (
 //   </div>
 // );
 
-
+// </div>
+//           <div className="hobbyPics">
+//             <h2> Your Hobbies </h2>
+//               <div className="row">
+//                 <div className="row-height">
+//               {user.hobbyObject.hobbies.map(function(hobby, i) {
+//               return (
+//                 <div className ="col-lg-4 col-sm-6 col-xs-12 col-middle col-height" key={i}>
+//                 <Link to={hobby.Hobby.hobby_url}><h4 className="userHobby">{hobby.Hobby.name}</h4></Link>
+//                     <Link to={hobby.Hobby.hobby_url}><img src={hobby.Hobby.hobby_image} className="image-fit thumbnail img-responsive"></img></Link>
+//               </div>
+//               );
+//               })}              
+//               </div>
+//               </div>
+//             </div>
 
 Profile.propTypes = {
   // secretData: PropTypes.string.isRequired

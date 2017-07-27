@@ -62,21 +62,10 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
                   <div className="container-fluid">
                     
                     <div className="navbar-header">
-                      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                      </button>
-                      <h3 className="navbar-brand" href="/home">Hobby Hookup</h3>
+                      
+                     <Link to="/"><h3 className="navbar-brand" href="/home">Hobby Hookup</h3></Link>
                     </div>
-    
-                      <form className="navbar-form navbar-left">
-                        <div className="form-group">
-                          <input type="text" className="form-control" placeholder="Search"></input>
-                        </div>
-                        <button type="submit" className="btn btn-default">Submit</button>
-                      </form>
+
                       <div className="nav navbar-nav navbar-right">
                         <div className="dropdown">
                             <button className="dropbtn btn btn-lg btn-default"> 
