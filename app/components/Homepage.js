@@ -65,7 +65,7 @@ var Homepage = React.createClass({
 									<div className="dropdown-content">
 									<Link to="/profile">Profile</Link>		
 									<Link to="/inbox">Inbox</Link>	
-									<Link to="/update">Update</Link>
+									<Link to="/profile/update">Update</Link>
 									<Link to="/logout">Logout</Link>
 									</div>
 								</div>

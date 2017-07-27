@@ -53,29 +53,24 @@ const Inbox = ({ user, handleUserClick }) => (
 		<br></br>
 
 	  <div className="panel panel-primary" id="inbox">
-	      <div className="panel-heading">Inbox</div>
-	      <div className="panel-body" id="unloadHere"></div>
-
-
-	       <div className="inbox">
-            <h2> Your Messages</h2>
-              <div className="row">
+	      <div className="panel-heading" id="chat-panel"><h2>Inbox</h2></div>
+            <h3 id="panel-body">Your Messages</h3>
+              <div className="row panel-body">
               {user.inboxChatObject.inboxChats.map(function(chat, i) {
               return (
                 <div className ="col-lg-12 col-sm-12 col-xs-12" key={i}>               
-                <a href="#" onClick={() => handleUserClick(chat.sender)}><h4 className="messageSender">{chat.sender}</h4></a>
-                <p className="inboxMessage">{chat.message}</p>
-              </div>
+                	<Link to={'/Messages/' + chat.sender}><h4 className="messageSender">{chat.sender}</h4></Link>
+                	<p className="inboxMessage">{chat.message}</p>
+              	</div>
               );
               })}              
               </div>
             </div>
 
-
-	   </div>
 	</div>
 );
 
+// <a href="#" onClick={() => handleUserClick(chat.sender)}><h4 className="messageSender">{chat.sender}</h4></a>
 
 Inbox.propTypes = {
   // secretData: PropTypes.string.isRequired

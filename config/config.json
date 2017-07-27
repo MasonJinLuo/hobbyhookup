@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "mysjell5",
     "database": "hobbyhookupdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "mysjell5",
     "database": "hobbyhookupdb",
     "host": "localhost",
     "dialect": "mysql"

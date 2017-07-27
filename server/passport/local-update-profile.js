@@ -1,79 +1,44 @@
 // const User = require('mongoose').model('User');
 // const PassportLocalStrategy = require('passport-local').Strategy;
 
-//TODO:  Distinguish between username and email already taken in error
+//TODO:  Distinguish between username and email already taken in error, check password
 
-var passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy,
-    bcrypt = require('bcryptjs'),
-    db = require('../../models')
 
-/**
- * Return the Passport Local Strategy object.
- */
-module.exports = new LocalStrategy({
-  usernameField: 'username',
-  passwordField: 'password',
-  session: false,
-  passReqToCallback: true
-}, (req, username, password, done) => {
-  console.log("signup hitting local-signup passwordhash")
-  console.log(req.body)
-  var hashedPassword;
-  var salt = bcrypt.genSaltSync(10);
-  var hashedPassword = bcrypt.hashSync(password.trim(), salt);
-  console.log("signup hitting local-signup post-passwordhash")
-  const userData = {
-    username: username.trim(),
-    password: password.trim(),
-    hashedPassword: hashedPassword,
-    // name: req.body.name.trim()
-    email: req.body.email.trim()
 
-  };
-  console.log(userData)
 
-  // const newUser = new User(userData);
-  // newUser.save((err) => {
-  //   if (err) { return done(err); }
+  // db.User.findAll({ attributes: ['email'] }).then(function(data) {
+  // db.User.findAll({ attributes: ['username', 'email'] }).then(function(data) {
+  //   var exist_username = [];
+  //   var exist_email = []
+  //   for (key in data) {
+  //     exist_username.push(data[key].dataValues.username);
+  //     exist_email.push(data[key].dataValues.email);
+  //   };
+  //   if (exist_username.indexOf(userData.username) === -1 && exist_email.indexOf(userData.email) === -1) {
+  //     db.User.create({
+  //       username: userData.username,
+  //       password: userData.password,
+  //       // password: userData.hashedPassword,
+  //       email: userData.email
+  //       // first_name: userData.username,
+  //       // last_name: userData.username,
+  //       // age: 42,
+  //       // location: userData.username
 
-  //   return done(null);
+  //     }).then(function() {
+  //         // res.send(true);
+  //         // alert("Succesfully registered, please log in.")
+  //         console.log("Succesfully registered, please log in.")
+  //         return done(null)
+  //       });
+  //     } else {
+  //       // alert("Error: Existing user")
+  //       var error = "existingUser"
+  //       console.log("Error: Username or email exists in the system.")
+  //       return done(error)
+  //       // res.send('exist user');
+  //     }
   // });
-
-
-  // db.User.findAll({ attributes: ['username'] }).then(function(data) {
-  db.User.findAll({ attributes: ['username', 'email'] }).then(function(data) {
-    var exist_username = [];
-    var exist_email = []
-    for (key in data) {
-      exist_username.push(data[key].dataValues.username);
-      exist_email.push(data[key].dataValues.email);
-    };
-    if (exist_username.indexOf(userData.username) === -1 && exist_email.indexOf(userData.email) === -1) {
-      db.User.create({
-        username: userData.username,
-        password: userData.password,
-        // password: userData.hashedPassword,
-        email: userData.email
-        // first_name: userData.username,
-        // last_name: userData.username,
-        // age: 42,
-        // location: userData.username
-
-      }).then(function() {
-          // res.send(true);
-          // alert("Succesfully registered, please log in.")
-          console.log("Succesfully registered, please log in.")
-          return done(null)
-        });
-      } else {
-        // alert("Error: Existing user")
-        var error = "existingUser"
-        console.log("Error: Username or email exists in the system.")
-        return done(error)
-        // res.send('exist user');
-      }
-  });
 
   // //TODO:  CONVERT THIS OUT OF JQUERY
   //   $.post("/newuser/post", userData, function(data){

@@ -1,8 +1,5 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-// import { Card, CardText } from 'material-ui/Card';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import TextField from 'material-ui/TextField';
 
 
 const SignUpForm = ({
@@ -14,11 +11,11 @@ const SignUpForm = ({
   <div id="main">
   <div className="container">
     <form action="/" onSubmit={onSubmit}>
-      <h2 className="card-heading">Sign Up</h2>
+      <h2 className="card-heading col-lg-12 col-sm-12 col-xs-12">Sign Up</h2>
 
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
-      <div className="form-group">
+      <div className="form-group col-lg-12 col-sm-12 col-xs-12">
         <label for="username">Username</label>
         <input
           value={user.username}
@@ -31,7 +28,7 @@ const SignUpForm = ({
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group col-lg-12 col-sm-12 col-xs-12">
         <label for="email">Email</label>
         <input
           value={user.email}
@@ -44,7 +41,7 @@ const SignUpForm = ({
           required
         />
       </div>
-      <div className="form-group">
+      <div className="form-group col-lg-12 col-sm-12 col-xs-12">
         <label for="password">Password</label>
         <input
           value={user.password}

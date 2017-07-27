@@ -15,6 +15,17 @@ router.get('/dashboard', (req, res) => {
   });
 });
 
+router.get('/updateprofile', (req, res) => {
+  console.log (req)
+  console.log (req.body)
+  console.log (req.message)
+  console.log (req.username)
+  res.status(200).json({
+    message: "You're authorized to see this secret message.",
+    user: req.user
+  });
+});
+
 router.get('/hobby', (req, res) => {
   console.log (req)
   console.log (req.body)

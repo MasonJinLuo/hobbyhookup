@@ -32,6 +32,7 @@ import LoginPage from '../components/login/LoginPage.jsx';
 import SignUpPage from '../components/login/SignUpPage.jsx';
 import Auth from '../components/login/Auth';
 import Profile from '../components/profile/ProfilePage.jsx';
+import ProfileUpdatePage from '../components/profile/ProfileUpdatePage.jsx';
 import Inbox from '../components/inbox/InboxPage.jsx';
 import Messages from '../components/inbox/MessagesPage.jsx';
 
@@ -211,6 +212,13 @@ module.exports = (
     <Route path='/profile' getComponent={(location, callback)=> {
       if (Auth.isUserAuthenticated()) {
           callback(null, Profile);
+        } else {
+          callback(null, LoginPage);
+        }
+    }} />
+    <Route path='/profile/update' getComponent={(location, callback)=> {
+      if (Auth.isUserAuthenticated()) {
+          callback(null, ProfileUpdatePage);
         } else {
           callback(null, LoginPage);
         }

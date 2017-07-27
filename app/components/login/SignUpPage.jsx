@@ -107,4 +107,4 @@ SignUpPage.contextTypes = {
   router: PropTypes.object.isRequired
 };
 
-export default SignUpPage;1
+export default SignUpPage;
