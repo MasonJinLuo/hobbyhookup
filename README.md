@@ -6,7 +6,7 @@ HobbyHookup is a social application that focuses on connecting individuals throu
 
 ### Core Features
 
-HobbyHookup provides users with the means to explore a variety of hobbies, then indicate their interest in a hobby of their choosing along with their basic level of experience (noobie, experienced, or guru). This user can then click a 'Match Me!' button to randomly match with three users who are also interested in this hobby - one of each of the three experience levels.  A user can review the basic details shared in this matching screen, then choose a member to connect with - or 'reroll' to get a new set of matches and try again.  
+HobbyHookup provides users with the means to explore a variety of hobbies, then indicate their interest in a hobby of their choosing along with their basic level of experience (noobie, experienced, or guru). This user can then click a 'Match Me!' button to randomly match with three users who are also interested in this hobby - one of each of the three experience levels.  A user can review the basic details shared in this matching screen, then choose a member to connect with - or 'reroll' to get a new set of matches.  
 
 Connecting with an individual brings the user to a message screen, where they can send messages back and forth to share information and anecdotes about their shared hobby and get to know each other.  All incoming messages are also stored in a user's inbox, from which they can click on a user to bring up the full conversation (incoming and outgoing messages with that specific user.)
 	
