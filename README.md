@@ -2,7 +2,7 @@
 
 ## Description
 
-HobbyHookup is a social application that focuses on connecting individuals through a variety of 'niche' hobbies.  While finding a friend or coworker who enjoys similar sports, movies, books, or other mainstream activities may be an easy task, it can be more difficult to find individuals who share uncommon interests such as beekeeping, rock climbing, salsa dancing or parkour.  Our app aims to help people forge connections and form a community based on any number of eclectic interests, and to find exciting new activities to try!  
+HobbyHookup is a social application that focuses on connecting individuals through a variety of 'niche' hobbies.  While finding a friend or coworker who enjoys similar sports, movies, books, or other mainstream activities may be an easy task, it can be more difficult to find individuals who share uncommon interests such as beekeeping, rock climbing, salsa dancing or parkour.  Our app helps people forge connections and form a community based on any number of eclectic interests, and find exciting new activities to try!  
 
 ### Core Features
 
