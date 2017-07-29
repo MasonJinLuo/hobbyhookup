@@ -57,7 +57,7 @@ Users will need Google Chrome web browser for testing the application and Sublim
 
 ## Testing
 
-After downloading or cloning the repository to your desktop, reate a database in MySQL Workbench entitled "hobbyhookupdb."  Use said database and seed it with the seed document in the /db folder, or add your own seeds and enter them into the MySQL database.  Add your MySQL Workbench password to the config.json.
+After downloading or cloning the repository to your desktop, create a database in MySQL Workbench entitled "hobbyhookupdb".  Use said database and seed it with the seed document in the /db folder, or add your own seeds and enter them into the MySQL database.  Add your MySQL Workbench password to the config.json.
 
 Navigate to the file folder that holds the HobbyHookup files in the terminal.  Type "npm install".  Type 'webpack' to build the application, then run the server: "node server.js" 
 
@@ -69,7 +69,7 @@ Profile pages display the profile owner's username, avatar image, age, and locat
 
 The individual hobby pages (accessed from the homepage or user profile) offer a picture and brief description of the hobby, as well as a section where a user can add the hobby to their profile along with their experience level (1, 2 or 3).  Once a user has added a hobby, they can select the 'match' button to bring up three random users to message, one for each level of experience.  Clicking on one of these users will take you to a conversation with that user. Posting a message will add a message to that conversation, as well as a new message to the recipient's inbox (where all received messages from all users are located).
 
-The log out function in the nav bar returns the user to the log-in page.  Currently, all pages require a user to be logged in via a JSON Web Token, or else they will be redirected to the log-in page.
+The log out function in the nav bar returns the user to the log-in page.  Currently, all pages besides log-in and sign-up require a user to be logged in via a JSON Web Token, or else they will be redirected to the log-in page.
 
 
 ## Code Walkthrough
