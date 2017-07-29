@@ -66,7 +66,7 @@ The log out function in the nav bar returns the user to the log-in page.  Curren
 ## Code Walkthrough
 Please refer to the repository files for coding samples; The sections are commented to indicate their functionality.
 
-If you have any questions about how or why something works, feel free to contact a member of the [Project Team](https://github.com/MasonJinLuo/hobbyhookup) for details!
+If you have any questions about how or why something works, feel free to contact a member of the [Project Team](https://github.com/MasonJinLuo/hobbyhookup/graphs/contributors) for details!
 
 
 ### Current Scope and Future Development
