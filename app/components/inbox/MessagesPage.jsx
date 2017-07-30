@@ -40,7 +40,27 @@ class MessagesPage extends React.Component {
               }
           }).then(function(cashMoney){
              document.getElementById("chat-input").value = "";
-          });
+            $.ajax({
+            method: "GET",
+            url: "/messages",
+              data: {
+                sender: this.state.user.username,
+                receiver: this.props.params.user
+              },
+          }).then(function(chatLog){
+            var concat = chatLog[0].concat(chatLog[1]);
+            console.log(concat[0].id)
+            var sortedConcat = concat.sort(function(a, b) {
+                return parseFloat(a.id) - parseFloat(b.id);
+            });
+            console.log(sortedConcat);
+              this.setState({
+                messagesArray: sortedConcat
+              })
+
+            console.log(this.state.messagesArray);
+        }.bind(this));
+      }.bind(this));
   }
 
   /**
@@ -92,6 +112,33 @@ class MessagesPage extends React.Component {
     xhr.send();
 
   }
+
+// WORKS But has infinite loop of chekcing state/ajax query
+  // componentDidUpdate() {
+  //   console.log("this ", this)
+  //          $.ajax({
+  //           method: "GET",
+  //           url: "/messages",
+  //             data: {
+  //               sender: this.state.user.username,
+  //               receiver: this.props.params.user
+  //             },
+  //         }).then(function(chatLog){
+  //           var concat = chatLog[0].concat(chatLog[1]);
+  //           console.log(concat[0].id)
+  //           var sortedConcat = concat.sort(function(a, b) {
+  //               return parseFloat(a.id) - parseFloat(b.id);
+  //           });
+  //           console.log(sortedConcat);
+  //           if (sortedConcat[0] !== this.state.messagesArray[0]) {
+  //             this.setState({
+  //             messagesArray: sortedConcat
+  //             })
+  //           }
+
+  //           console.log(this.state.messagesArray);
+  //       }.bind(this));
+  // }
 
 
   /**

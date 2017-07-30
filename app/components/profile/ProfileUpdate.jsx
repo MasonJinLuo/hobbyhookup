@@ -54,7 +54,7 @@ var Link = require("react-router").Link;
    //          </div>
 
 
-const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
+const ProfileUpdate = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
 
    <div>
       <div className="container navContainer">
@@ -94,7 +94,7 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
       <div className="form-group col-lg-12 col-sm-12 col-xs-12" >
-        <label for="password">Please Confirm Your Password</label>
+        <label htmlFor="password">Please Confirm Your Password</label>
         <input
           value={userUpdateInfo.password}
           type="password"
@@ -107,7 +107,7 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
         />
       </div>
       <div className="form-group col-lg-12 col-sm-12 col-xs-12">
-        <label for="age">Age</label>
+        <label htmlFor="age">Age</label>
         <input
           value={userUpdateInfo.age}
           type="integer"
@@ -120,7 +120,7 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
         />
       </div>
       <div className="form-group col-lg-12 col-sm-12 col-xs-12">
-        <label for="location">Location</label>
+        <label htmlFor="location">Location</label>
         <input
           value={userUpdateInfo.location}
           type="text"
@@ -133,7 +133,7 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
         />
       </div>
       <div className="form-group col-lg-12 col-sm-12 col-xs-12">
-        <label for="location">User Avatar</label>
+        <label htmlFor="location">User Avatar</label>
         <input
           value={userUpdateInfo.image_path}
           type="text"
@@ -175,11 +175,12 @@ const Profile = ({ onSubmit, onChange, errors, user, userUpdateInfo }) => (
 //   </div>
 // );
 
-Profile.propTypes = {
+ProfileUpdate.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired,
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  userUpdateInfo: PropTypes.object.isRequired
 };
 
-export default Profile;
+export default ProfileUpdate;

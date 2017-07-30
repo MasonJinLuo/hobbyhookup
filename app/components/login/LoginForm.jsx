@@ -21,7 +21,7 @@ const LoginForm = ({
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
       <div className="form-group col-lg-12 col-sm-12 col-xs-12">
-        <label for="username">Username</label>
+        <label htmlFor="username">Username</label>
         <input
           value={user.username}
           type="text"
@@ -34,7 +34,7 @@ const LoginForm = ({
         />
       </div>
       <div className="form-group col-lg-12 col-sm-12 col-xs-12">
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input
           value={user.password}
           type="password"

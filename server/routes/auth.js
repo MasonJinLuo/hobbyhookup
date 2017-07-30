@@ -33,7 +33,7 @@ function validateSignupForm(payload) {
 
   if (!payload || typeof payload.username !== 'string' || payload.username.trim().length === 0) {
     isFormValid = false;
-    errors.username = 'Please provide your ysername.';
+    errors.username = 'Please provide your username.';
   }
 
   if (!isFormValid) {
@@ -94,7 +94,7 @@ function validateUpdateProfileForm(payload) {
   var errors = {};
   var isFormValid = true;
   var message = '';
-
+  console.log("validateform req.body payload ", payload)
   // if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
   //   isFormValid = false;
   //   errors.email = 'Please provide a correct email address.';
@@ -110,24 +110,25 @@ function validateUpdateProfileForm(payload) {
     errors.password = 'Please provide your password.';
   }
 
-  if (!payload || typeof payload.age !== 'integer' || payload.age.trim().length === 0) {
+  //TODO: typeof payload.age !== 'integer' ||
+  if (!payload || payload.age.trim().length === 0) {
     isFormValid = false;
-    errors.username = 'Please provide your age.';
+    errors.age = 'Please provide your age.';
   }
 
   if (!payload || typeof payload.location !== 'string' || payload.location.trim().length === 0) {
     isFormValid = false;
-    errors.username = 'Please provide your location.';
+    errors.location = 'Please provide your location.';
   }
 
   if (!payload || typeof payload.image_path !== 'string' || payload.location.trim().length === 0) {
     isFormValid = false;
-    errors.username = 'Please provide a link to your avatar.';
+    errors.image = 'Please provide a link to your avatar.';
   }
 
 
   if (!isFormValid) {
-    console.log(isFormValid);
+    console.log("initial validation check ", isFormValid);
     message = 'Check the form for errors.';
   }
 
@@ -226,7 +227,7 @@ router.post('/login', (req, res, next) => {
 });
 
 
-router.post('/updateprofile', (req, res, next) => {
+router.post('/updateprofile', (req, res) => {
   const validationResult = validateUpdateProfileForm(req.body);
   if (!validationResult.success) {
     return res.status(400).json({
@@ -247,21 +248,21 @@ router.post('/updateprofile', (req, res, next) => {
 //   session: false,
 //   passReqToCallback: true
 // }, (req, username, password, done) => {
-  console.log("update hitting local-update passwordhash")
+  console.log("update hitting auth pre-passwordhash")
   console.log(req.body)
   var hashedPassword;
   var salt = bcrypt.genSaltSync(10);
-  var hashedPassword = bcrypt.hashSync(password.trim(), salt);
-  console.log("signup hitting local-signup post-passwordhash")
+  var hashedPassword = bcrypt.hashSync(req.body.password.trim(), salt);
+  console.log("update hitting auth post-passwordhash")
   const userData = {
-    username: username.trim(),
-    password: password.trim(),
+    username: req.body.username.trim(),
+    password: req.body.password.trim(),
     hashedPassword: hashedPassword,
     // name: req.body.name.trim()
     // email: req.body.email.trim()    
     age: req.body.age.trim(),
     location: req.body.location.trim(),
-    image_path: req.boody.image_path.trim()
+    image_path: req.body.image_path.trim()
 
   };
   console.log(userData)
@@ -281,16 +282,18 @@ router.post('/updateprofile', (req, res, next) => {
         image_path: userData.image_path
       }, {
           where: {
-              username: username
+              username: userData.username
           }
   }).then(function(data, err) {
-    console.log(data)
-    console.log(err)
-    //TODO: do something with err
+    if (err) {
+      console.log("err: ", err)
+      throw err
+    }
     return res.status(200).json({
        success: true,
        message: 'You have successfully updated your profile!'
     });
+  // })(req, res);
   });
 });
 
