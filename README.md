@@ -12,7 +12,7 @@ Connecting with an individual brings the user to a message screen, where they ca
 	
 ### Current Scope and Future Development
 
-The Hobby Hookup app provides foundational functionality as a social web application using a full SQL-Express-React-Node stack.  This includes all features necessary for the typical user experience;  An individual who visits our site can sign up, log in, update their profile, explore a number of hobby pages, indicate which hobbies they are interested in, match with other individuals who share these hobbies, then message back and forth with these connections.
+The HobbyHookup app provides foundational functionality as a social web application using a full SQL-Express-React-Node stack.  This includes all features necessary for the typical user experience;  An individual who visits our site can sign up, log in, update their profile, explore a number of hobby pages, indicate which hobbies they are interested in, match with other individuals who share these hobbies, then message back and forth with these connections.
 
 In future builds we would like to expand this proof of concept with a variety of features to provide users with the best possible means to form connections, as well as make Hobby Hookup the fun and friendly experience we want it to be.
 
