@@ -303,7 +303,7 @@ app.get('/api/checkHobby', function(req,res){
     console.log("WHY WHY WHY WHY WHY?!?!?" , req.query.user_id);
 
 
-    db.User2Hobby.findOne({
+    db.User2Hobby.findAll({
         where:{
             user_id:  req.query.user_id,
             hobby_id: req.query.hobby_id
